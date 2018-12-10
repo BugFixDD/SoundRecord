@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjd-To-w1e">
+                                <rect key="frame" x="75" y="632" width="225" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="RUV-6r-PHu"/>
+                                </constraints>
+                                <state key="normal" title="按住 说话">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7WP-qa-JMx"/>
+                                    <action selector="record:" destination="BYZ-38-t0r" eventType="touchDown" id="zrY-bn-ioK"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XHa-HW-V9a">
+                                <rect key="frame" x="0.0" y="20" width="375" height="607"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="3aq-Vv-y9J"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="hK2-fX-HlT"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mjd-To-w1e" secondAttribute="bottom" constant="5" id="Ahc-D0-NXj"/>
+                            <constraint firstItem="mjd-To-w1e" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.6" id="FRo-yH-7X5"/>
+                            <constraint firstItem="XHa-HW-V9a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QbK-J2-2od"/>
+                            <constraint firstAttribute="trailing" secondItem="XHa-HW-V9a" secondAttribute="trailing" id="TdC-si-eoj"/>
+                            <constraint firstItem="mjd-To-w1e" firstAttribute="top" secondItem="XHa-HW-V9a" secondAttribute="bottom" constant="5" id="W8H-UN-Xry"/>
+                            <constraint firstItem="mjd-To-w1e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h1x-bV-imK"/>
+                            <constraint firstItem="XHa-HW-V9a" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="jkP-fo-oZ1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="recordBtn" destination="mjd-To-w1e" id="423-a1-Ah5"/>
+                        <outlet property="tableVw" destination="XHa-HW-V9a" id="zxh-gf-mwp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

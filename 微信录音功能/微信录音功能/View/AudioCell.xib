@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reusedID" rowHeight="172" id="JkE-DJ-BBO" customClass="AudioCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="172"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JkE-DJ-BBO" id="dRF-Zo-yKe">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="171.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="7" translatesAutoresizingMaskIntoConstraints="NO" id="c54-wE-chy">
+                        <rect key="frame" x="299" y="61" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="2Mc-bp-Pv0"/>
+                            <constraint firstAttribute="height" constant="50" id="oYB-y7-tyg"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gsc-9x-zAK">
+                        <rect key="frame" x="244" y="69" width="50" height="34"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="GrU-M2-Iws"/>
+                        </constraints>
+                        <state key="normal" title="播放"/>
+                        <state key="selected" title="停止"/>
+                        <connections>
+                            <action selector="playBtnClick:" destination="JkE-DJ-BBO" eventType="touchUpInside" id="cLS-tb-Zio"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lr3-ru-c4c">
+                        <rect key="frame" x="197" y="75.5" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Gsc-9x-zAK" firstAttribute="centerY" secondItem="c54-wE-chy" secondAttribute="centerY" id="7f5-6H-Hwb"/>
+                    <constraint firstItem="c54-wE-chy" firstAttribute="leading" secondItem="Gsc-9x-zAK" secondAttribute="trailing" constant="5" id="GSM-jE-G33"/>
+                    <constraint firstItem="Gsc-9x-zAK" firstAttribute="leading" secondItem="Lr3-ru-c4c" secondAttribute="trailing" constant="5" id="eDZ-ce-0YV"/>
+                    <constraint firstItem="c54-wE-chy" firstAttribute="centerY" secondItem="dRF-Zo-yKe" secondAttribute="centerY" id="eT8-wd-vZK"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="c54-wE-chy" secondAttribute="trailing" constant="10" id="o7B-up-cv5"/>
+                    <constraint firstItem="Lr3-ru-c4c" firstAttribute="centerY" secondItem="c54-wE-chy" secondAttribute="centerY" id="siA-k3-iAV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btnWidthConstraint" destination="GrU-M2-Iws" id="NBH-B0-oCV"/>
+                <outlet property="playSoundBtn" destination="Gsc-9x-zAK" id="wi0-If-2cg"/>
+                <outlet property="timeLabel" destination="Lr3-ru-c4c" id="zXF-a6-A24"/>
+            </connections>
+            <point key="canvasLocation" x="-94.5" y="63"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="7" width="120" height="120"/>
+    </resources>
+</document>
